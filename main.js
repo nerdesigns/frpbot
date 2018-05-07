@@ -235,4 +235,4 @@ function random(min, max) {
     randnum = Math.floor(Math.random() * (max - min +1) + min);
 }
 
-client.login(process.env.NDQyMzkwMDUxOTc2OTA0NzE1.DdBsFA.zbAdsKPzEug3dZCFY6eEcHiE6-c);
+client.login(process.env.BOT_TOKEN);
