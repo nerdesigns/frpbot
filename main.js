@@ -6,12 +6,23 @@ var bot = new Discord.Client();
 var prefix = ("/")
 var randnum = 0;
 
+//TEST HEROKU
+client.on('ready', () => {
+    client.user.setActivity('https://git.io/d.js-heroku', {type: 'WATCHING'});
+});
+
+client.on('message', msg => {
+    if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
+    const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
+    const args = msg.content.split(' ').slice(1).join(' ');
+    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
+    else if (command === 'invite') return msg.channel.send(process.env.INVITE);
+});
+
 bot.on('ready', () => {
     bot.user.setPresence({ game: {name: 'Garrys Mod | /help', type : 0}});
     console.log("FRP BOT FONCTIONNE");
 });
-//TOKEN DU BOT
-bot.login('NDQyMzkwMDUxOTc2OTA0NzE1.DdBsFA.zbAdsKPzEug3dZCFY6eEcHiE6-c');
 
 bot.on("guildMemberAdd", member =>{
     const guild = member.guild;
