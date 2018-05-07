@@ -8,14 +8,14 @@ var randnum = 0;
 
 //TEST HEROKU
 client.on('ready', () => {
-    client.user.setActivity('https://git.io/d.js-heroku', {type: 'WATCHING'});
+    client.user.setActivity('https://french-roleplay.com/ | /help', {type: 'WATCHING'});
 });
 
 client.on('message', msg => {
     if (!msg.content.startsWith(process.env.PREFIX) || !msg.guild) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
-    if (command === 'guide') return msg.channel.send('https://git.io/d.js-heroku');
+    if (command === 'guide') return msg.channel.send('https://french-roleplay.com/');
     else if (command === 'invite') return msg.channel.send(process.env.INVITE);
 });
 
