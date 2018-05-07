@@ -234,3 +234,5 @@ function random(min, max) {
     max = Math.floor(10);//AJOUTER 1 AU NOMBRE SI AJOUTER 1 REPONSES
     randnum = Math.floor(Math.random() * (max - min +1) + min);
 }
+
+client.login(process.env.NDQyMzkwMDUxOTc2OTA0NzE1.DdBsFA.zbAdsKPzEug3dZCFY6eEcHiE6-c);
