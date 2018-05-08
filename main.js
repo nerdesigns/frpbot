@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const config = require("./config.json");
+const client = new Discord.Client();
 
 var bot = new Discord.Client();
 var prefix = ("/")
@@ -234,3 +235,5 @@ function random(min, max) {
     max = Math.floor(10);//AJOUTER 1 AU NOMBRE SI AJOUTER 1 REPONSES
     randnum = Math.floor(Math.random() * (max - min +1) + min);
 }
+
+client.login(process.env.TOKEN);
