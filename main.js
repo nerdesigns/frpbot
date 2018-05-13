@@ -11,7 +11,7 @@ bot.on('ready', () => {
     console.log("FRP BOT FONCTIONNE");
 });
 //TOKEN DU BOT
-bot.login('NDQyMzkwMDUxOTc2OTA0NzE1.DdBsFA.zbAdsKPzEug3dZCFY6eEcHiE6-c');
+bot.login('XXX');
 
 bot.on("guildMemberAdd", member =>{
     const guild = member.guild;
